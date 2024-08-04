@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Control System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Version Control System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <form id="init-form">
+            <h2>Initialize Repository</h2>
+            <input type="text" name="repo_name" placeholder="Repository Name" required>
+            <input type="submit" value="Initialize">
+        </form>
+
+        <form id="add-file-form">
+            <h2>Add File</h2>
+            <input type="text" name="file_name" placeholder="File Name" required>
+            <textarea name="file_content" placeholder="File Content" required></textarea>
+            <input type="submit" value="Add File">
+        </form>
+
+        <form id="commit-form">
+            <h2>Commit Changes</h2>
+            <input type="text" name="commit_message" placeholder="Commit Message" required>
+            <input type="submit" value="Commit">
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
