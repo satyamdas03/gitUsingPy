@@ -1,23 +1,37 @@
-# pygit
+# Version Control System Web App
 
-A simple implementation of Git using Python.
+This is a web-based version control system implemented using Flask. It provides basic Git-like functionality such as initializing a repository, adding files, and committing changes.
 
-## Commands
+## Setup
 
-- `init` - Initialize a new repository.
-- `hash-object <filename>` - Hash an object and store it in the object database.
-- `cat-file <type> <oid>` - Display the content of an object.
-- `update-index <filename> <oid>` - Add a file to the index.
-- `write-tree` - Write the current index as a tree object.
-- `commit <message> <tree-oid> [<parent-oid>]` - Commit a tree object.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/version_control_app.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd version_control_app
+    ```
+3. Install the required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+4. Run the application:
+    ```sh
+    python app.py
+    ```
 
-## Example Usage
+## Usage
 
-```sh
-$ pygit init
-$ pygit hash-object example/sample.txt
-$ pygit cat-file blob <oid>
-$ pygit update-index example/sample.txt <oid>
-$ pygit write-tree
-$ pygit commit "Initial commit" <tree-oid>
-```
+- Open your web browser and go to `http://127.0.0.1:5000`.
+- Use the web interface to initialize a repository, add files, and commit changes.
+
+## File Structure
+
+- `app.py`: Main application file.
+- `version_control.py`: Contains core version control logic.
+- `templates/index.html`: HTML template for the web interface.
+- `static/`: Directory for static files (CSS, JS).
+- `.gitignore`: Git ignore file.
+- `requirements.txt`: Python dependencies.
+- `README.md`: Project documentation.
